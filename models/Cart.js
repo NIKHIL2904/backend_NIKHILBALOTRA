@@ -39,6 +39,11 @@ const cartSchema = new mongoose.Schema({
       default: 1
     }
   }],
+  status: {
+    type: String,
+    enum: ['pending', 'confirmed'], // Add more statuses as needed
+    default: 'pending',
+  },
   // Add any other fields specific to the cart schema as needed
 });
 
